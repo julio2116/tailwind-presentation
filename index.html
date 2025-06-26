@@ -96,36 +96,6 @@
     <button id="prev" class="px-5 py-2 rounded-md bg-sky-400 text-white text-base transition-colors disabled:bg-slate-400">Anterior</button>
     <button id="next" class="px-5 py-2 rounded-md bg-sky-400 text-white text-base transition-colors disabled:bg-slate-400">Próximo</button>
   </div>
-  <script>
-    const slides = document.querySelectorAll('.slide');
-    let current = 0;
-    const prevBtn = document.querySelector('#prev');
-    const nextBtn = document.querySelector('#next');
-
-    function showSlide(idx) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === idx);
-        slide.classList.toggle('hidden', i !== idx);
-      });
-      prevBtn.disabled = idx === 0;
-      nextBtn.disabled = idx === slides.length - 1;
-    }
-
-    prevBtn.addEventListener('click', () => {
-      if (current > 0) {
-        current--;
-        showSlide(current);
-      }
-    });
-    nextBtn.addEventListener('click', () => {
-      if (current < slides.length - 1) {
-        current++;
-        showSlide(current);
-      }
-    });
-    showSlide(current);
-
-  </script>
-  <script type="module" src="tailwind.js"></script>
+  <script src="index.js"></script>
 </body>
 </html> 
